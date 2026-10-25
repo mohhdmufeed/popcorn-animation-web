@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+  --color-butter: #f6c945;
+  --color-plum: #2a1233;
+  --color-cinema: #d4202a;
+  --color-cream: #fff4dc;
+  --color-ink: #3b0a12;
+}
+
+html.intro,
+html.intro body {
+  overflow: hidden;
+}
+
+html { scroll-behavior: smooth; }
+body { background: #2a1233; font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+
+#hero { background-color: #12060a; }
+
+/* revealed by the GSAP intro timeline */
+.hero-word,
+.hero-fade { opacity: 0; visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
